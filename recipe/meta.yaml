@@ -19,11 +19,11 @@ requirements:
     - {{ compiler('cxx') }}
 
   host:
-    - boost-cpp {{ version }}.*
+    - boost-cpp
     - {{ mpi }}
 
   run:
-    - boost-cpp {{ version }}.*
+    - boost-cpp
     - {{ mpi }}
 
   run_constrained:
