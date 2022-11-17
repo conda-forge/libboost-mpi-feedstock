@@ -1,4 +1,4 @@
-{% set boost_cpp_version = boost_cpp_version|default("1.80.0") %}
+{% set boost_cpp_version = boost_cpp_version|default("1.78.0") %}
 
 package:
   name: libboost-mpi
