@@ -1,3 +1,7 @@
+boost:
+- 1.78.0
+boost_cpp:
+- 1.78.0
 channel_sources:
 - conda-forge
 channel_targets:
@@ -10,5 +14,10 @@ mpich:
 - '4'
 openmpi:
 - '4'
+pin_run_as_build:
+  boost:
+    max_pin: x.x.x
+  boost-cpp:
+    max_pin: x.x.x
 target_platform:
 - win-64
