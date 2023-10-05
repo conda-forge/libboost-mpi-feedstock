@@ -1,9 +1,5 @@
 BUILD:
 - aarch64-conda_cos7-linux-gnu
-boost:
-- 1.78.0
-boost_cpp:
-- 1.78.0
 cdt_arch:
 - aarch64
 cdt_name:
@@ -15,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '10'
+- '12'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 mpi:
@@ -24,10 +20,5 @@ mpich:
 - '4'
 openmpi:
 - '4'
-pin_run_as_build:
-  boost:
-    max_pin: x.x.x
-  boost-cpp:
-    max_pin: x.x.x
 target_platform:
 - linux-aarch64
