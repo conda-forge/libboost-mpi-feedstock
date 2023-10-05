@@ -2,7 +2,7 @@
 
 package:
   name: libboost-mpi
-  version: {{ boost_cpp_version }}
+  version: {{ version }}
 
 source:
   url: https://boostorg.jfrog.io/artifactory/main/release/{{ version }}/source/boost_{{ version|replace(".", "_") }}.tar.bz2
