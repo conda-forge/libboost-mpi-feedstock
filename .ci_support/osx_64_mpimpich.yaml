@@ -1,9 +1,9 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
-boost:
-- '1.82'
-boost_cpp:
-- '1.82'
+c_stdlib:
+- macosx_deployment_target
+c_stdlib_version:
+- '10.9'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '15'
+- '16'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 mpi:
@@ -20,10 +20,5 @@ mpich:
 - '4'
 openmpi:
 - '4'
-pin_run_as_build:
-  boost:
-    max_pin: x.x.x
-  boost-cpp:
-    max_pin: x.x.x
 target_platform:
 - osx-64
