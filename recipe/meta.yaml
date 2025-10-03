@@ -1,17 +1,20 @@
-{% set version = "1.82.0" %}
+{% set version = "1.86.0" %}
 
 package:
   name: libboost-mpi
   version: {{ version }}
 
 source:
-  url: https://boostorg.jfrog.io/artifactory/main/release/{{ version }}/source/boost_{{ version|replace(".", "_") }}.tar.bz2
-  sha256: a6e1ab9b0860e6a2881dd7b21fe9f737a095e5f33a3a874afc6a345228597ee6
+  url: https://archives.boost.io/release/{{ version }}/source/boost_{{ version|replace(".", "_") }}.tar.gz
+  sha256: 2575e74ffc3ef1cd0babac2c1ee8bdb5782a0ee672b1912da40e5b4b591ca01f
   patches:
     - 5eff1ecc8413b0dc93a1ab047d7fed751e6cb40e.patch  # [not win]
+    - 9eae05a19d217918169f1ef7f6ea5e04a3b5370c.patch
 
 build:
-  number: 5
+  number: 0
+  run_exports:
+    - libboost-mpi
 
 requirements:
   build:
@@ -19,11 +22,6 @@ requirements:
     - {{ stdlib("c") }}
 
   host:
-    - libboost-devel {{ version }}.*
-    - {{ mpi }}
-
-  run:
-    # explicitly depend on -devel version because we need the headers
     - libboost-devel {{ version }}.*
     - {{ mpi }}
 
