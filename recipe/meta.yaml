@@ -9,8 +9,7 @@ source:
   sha256: 2575e74ffc3ef1cd0babac2c1ee8bdb5782a0ee672b1912da40e5b4b591ca01f
   patches:
     - 5eff1ecc8413b0dc93a1ab047d7fed751e6cb40e.patch  # [not win]
-    - 0001-Fix-MSMPI-missing-MPI_CXX_BOOL.patch       # [win]
-    - 0002-Fix-MPI-compiler-detection.patch
+    - 9eae05a19d217918169f1ef7f6ea5e04a3b5370c.patch
 
 build:
   number: 0
