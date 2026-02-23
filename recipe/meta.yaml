@@ -1,4 +1,4 @@
-{% set version = "1.89.0" %}
+{% set version = "1.90.0" %}
 
 package:
   name: libboost-mpi
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://archives.boost.io/release/{{ version }}/source/boost_{{ version|replace(".", "_") }}.tar.gz
-  sha256: 9de758db755e8330a01d995b0a24d09798048400ac25c03fc5ea9be364b13c93
+  sha256: 5e93d582aff26868d581a52ae78c7d8edf3f3064742c6e77901a1f18a437eea9
   patches:
     - 5eff1ecc8413b0dc93a1ab047d7fed751e6cb40e.patch  # [not win]
     - 0001-Fix-MSMPI-missing-MPI_CXX_BOOL.patch       # [win]
     - 0002-Fix-MPI-compiler-detection.patch
 
 build:
-  number: 2
+  number: 0
   run_exports:
     - libboost-mpi
 
