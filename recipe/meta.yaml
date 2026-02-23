@@ -12,7 +12,7 @@ source:
     - 9eae05a19d217918169f1ef7f6ea5e04a3b5370c.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - libboost-mpi
 
