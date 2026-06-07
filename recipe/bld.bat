@@ -11,6 +11,7 @@ echo using mpi : : >> %SRC_DIR%\project-config.jam
 echo   ^<include^>$(LIBRARY_INC) >> %SRC_DIR%\project-config.jam
 echo   ^<library-path^>$(LIBRARY_LIB) >> %SRC_DIR%\project-config.jam
 if "%mpi%"=="msmpi" echo   ^<find-shared-library^>msmpi >> %SRC_DIR%\project-config.jam
+if "%mpi%"=="impi-devel" echo   ^<find-shared-library^>impi >> %SRC_DIR%\project-config.jam
 echo ; >> %SRC_DIR%\project-config.jam
 
 :: Build step
