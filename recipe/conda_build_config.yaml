@@ -3,3 +3,4 @@ mpi:
   - openmpi     # [unix]
   - msmpi       # [win64]
   - impi-devel  # [linux64]
+  - impi-devel  # [win64]
