@@ -25,8 +25,18 @@ fi
 # http://www.boost.org/build/doc/html/bbv2/tasks/crosscompile.html
 cat <<EOF > ${SRC_DIR}/tools/build/src/site-config.jam
 using ${TOOLSET} : : ${CXX} ;
+EOF
+
+# Boost's default mpic++ lookup can pick an Intel MPI wrapper it cannot parse.
+if [[ "${mpi}" == "impi-devel" ]]; then
+cat <<EOF >> ${SRC_DIR}/tools/build/src/site-config.jam
+using mpi : ${PREFIX}/bin/mpicxx ;
+EOF
+else
+cat <<EOF >> ${SRC_DIR}/tools/build/src/site-config.jam
 using mpi ;
 EOF
+fi
 
 LINKFLAGS="${LINKFLAGS} -L${LIBRARY_PATH}"
 
